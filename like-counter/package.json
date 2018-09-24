@@ -1,0 +1,16 @@
+{
+  "name": "like-counter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel serve ./src/index.html"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.3",
+    "parcel": "^1.9.7"
+  },
+  "dependencies": {
+    "redux": "^4.0.0"
+  }
+}
