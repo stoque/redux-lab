@@ -1,13 +1,26 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { connect } from 'react-redux'
 
-class App extends Component {
-  render () {
-    return (
-      <div className="App">
-        App
-      </div>
-    )
-  }
-}
+const App = ({ todos }) => (
+  <div>
+    {console.log('todos', todos)}
+    <form>
+      <input type='text' />
+      <button>Cadastrar</button>
+    </form>
 
-export default App
+    <ul>
+      {todos.map((todo) => (
+        <li key={todo.id}>
+          {todo.text}
+        </li>
+      ))}
+    </ul>
+  </div>
+)
+
+const mapStateToProps = (state) => ({
+  todos: state
+})
+
+export default connect(mapStateToProps)(App)
